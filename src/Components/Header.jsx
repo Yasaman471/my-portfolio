@@ -1,12 +1,12 @@
-import { Menu, X } from "lucide-react";
 import { useState } from "react";
 import { Link } from "react-scroll";
+import { HiBars3, HiXMark } from "react-icons/hi2";
 
 const NAV_LINKS = [
-  { name: "Home", link: "home" },
-  { name: "About me", link: "about" },
-  { name: "Projects", link: "projects" },
-  { name: "Contact", link: "contact" },
+  { name: "خانه", link: "home" },
+  { name: "درباره من", link: "about" },
+  { name: "پروژه ها", link: "projects" },
+  { name: "تماس", link: "contact" },
 ];
 
 function Header() {
@@ -30,7 +30,7 @@ function Header() {
           onClick={() => setOpen((prev) => !prev)}
           className="cursor-pointer text-white md:hidden"
         >
-          {open ? <X size={28} /> : <Menu size={28} />}
+          {open ? <HiXMark size={28} /> : <HiBars3 size={28} />}
         </button>
 
         {/* ناوبری اصلی */}
