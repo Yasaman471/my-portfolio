@@ -1,93 +1,92 @@
 import { FaGithub, FaLinkedin, FaEnvelope, FaTelegram } from "react-icons/fa";
 import { Link } from "react-scroll";
-import profileImg from "../assets/profile.png";
 
 function Home() {
   return (
     <section
       id="home"
-      className="min-h-[calc(100vh-80px)] flex items-center justify-center py-12 px-7 md:px-10"
+      className="relative isolate min-h-[calc(100vh-80px)] overflow-hidden bg-[#29275f] flex items-center justify-center py-12 px-7 md:px-10"
     >
-      <div className="flex flex-col-reverse md:flex-row-reverse items-center justify-between gap-12 w-full max-w-6xl mx-auto">
-        {/* بخش متن و اطلاعات شخصی (راست‌چین برای زبان فارسی) */}
-        <div className="flex-1 text-center md:text-right space-y-6">
+      {/* نورهای ملایم پس‌زمینه */}
+      <div className="pointer-events-none absolute -top-40 right-1/4 z-0 h-96 w-96 rounded-full bg-violet-500/40 blur-3xl" />
+
+      <div className="pointer-events-none absolute top-40 -left-40 z-0 h-96 w-96 rounded-full bg-indigo-500/40 blur-3xl" />
+
+      <div className="relative z-10 flex w-full max-w-6xl mx-auto flex-col-reverse items-center justify-between gap-12 md:flex-row-reverse">
+        {/* بخش متن و اطلاعات شخصی */}
+        <div className="flex-1 space-y-6 text-center md:text-right">
           {/* خوش‌آمدگویی */}
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-primary/10 border border-primary/30 text-primary text-sm font-medium mx-auto md:mx-0">
+          <div className="mx-auto inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/10 px-4 py-1.5 text-sm font-medium text-primary md:mx-0">
             <span>👋</span>
             <span>سلام، خوش آمدید</span>
           </div>
 
-          <h1 className="text-4xl md:text-6xl font-extrabold text-white leading-tight">
+          <h1 className="text-4xl font-extrabold leading-tight text-white md:text-6xl">
             من <span className="text-primary">یاسمن عابدی</span> هستم
           </h1>
 
-          <h2 className="text-xl md:text-2xl font-semibold text-slate-300">
+          <h2 className="text-xl font-semibold text-slate-300 md:text-2xl">
             Frontend Developer | React & Next.js
           </h2>
 
-          <p className="text-slate-400 text-base md:text-lg max-w-xl leading-relaxed mx-auto md:mx-0">
+          <p className="mx-auto max-w-xl text-base leading-relaxed text-slate-400 md:mx-0 md:text-lg">
             توسعه‌دهنده فرانت‌اند با تمرکز بر ساخت وب‌اپلیکیشن‌های سریع، مدرن و
             با تجربه کاربری روان.
           </p>
 
-          {/* دکمه‌های اقدام (CTA) */}
-          <div className="flex flex-wrap items-center justify-center md:justify-start gap-4 pt-4">
+          {/* دکمه‌ها و شبکه‌های اجتماعی */}
+          <div className="flex flex-wrap items-center justify-center gap-4 pt-4 md:justify-start">
             <Link
               to="contact"
               smooth={true}
               offset={-70}
-              className="cursor-pointer px-6 py-3 rounded-xl bg-primary text-white font-medium hover:bg-primary/90 transition-all duration-300 shadow-lg shadow-primary/25 hover:shadow-primary/40"
+              className="cursor-pointer rounded-xl bg-primary px-6 py-3 font-medium text-white shadow-lg shadow-primary/25 transition-all duration-300 hover:bg-primary/90 hover:shadow-primary/40"
             >
               ارتباط با من
             </Link>
 
             <a
               href="#about"
-              className="px-6 py-3 rounded-xl border border-slate-700 text-slate-200 font-medium hover:bg-slate-800 hover:text-white transition-all duration-300"
+              className="rounded-xl border border-slate-700 px-6 py-3 font-medium text-slate-200 transition-all duration-300 hover:bg-slate-800 hover:text-white"
             >
               مشاهده رزومه
             </a>
 
-            {/* شبکه‌های اجتماعی با لینک‌های صحیح */}
             <div className="flex items-center gap-3">
-              {/* گیت‌هاب */}
               <a
                 href="https://github.com/Yasaman471"
                 target="_blank"
                 rel="noreferrer"
                 aria-label="GitHub"
-                className="p-3 rounded-xl bg-slate-800/80 text-slate-300 hover:text-primary hover:bg-slate-800 transition-all duration-300"
+                className="rounded-xl bg-slate-800/80 p-3 text-slate-300 transition-all duration-300 hover:bg-slate-800 hover:text-primary"
               >
                 <FaGithub size={20} />
               </a>
 
-              {/* لینکدین (یوزرنیم خودت را جایگزین کن) */}
               <a
                 href="https://linkedin.com/in/yasaman-abedi"
                 target="_blank"
                 rel="noreferrer"
                 aria-label="LinkedIn"
-                className="p-3 rounded-xl bg-slate-800/80 text-slate-300 hover:text-primary hover:bg-slate-800 transition-all duration-300"
+                className="rounded-xl bg-slate-800/80 p-3 text-slate-300 transition-all duration-300 hover:bg-slate-800 hover:text-primary"
               >
                 <FaLinkedin size={20} />
               </a>
 
-              {/* تلگرام */}
               <a
                 href="https://t.me/Yasaman471"
                 target="_blank"
                 rel="noreferrer"
                 aria-label="Telegram"
-                className="p-3 rounded-xl bg-slate-800/80 text-slate-300 hover:text-primary hover:bg-slate-800 transition-all duration-300"
+                className="rounded-xl bg-slate-800/80 p-3 text-slate-300 transition-all duration-300 hover:bg-slate-800 hover:text-primary"
               >
                 <FaTelegram size={20} />
               </a>
 
-              {/* ایمیل */}
               <a
                 href="mailto:yasaman471@gmail.com"
                 aria-label="Email"
-                className="p-3 rounded-xl bg-slate-800/80 text-slate-300 hover:text-primary hover:bg-slate-800 transition-all duration-300"
+                className="rounded-xl bg-slate-800/80 p-3 text-slate-300 transition-all duration-300 hover:bg-slate-800 hover:text-primary"
               >
                 <FaEnvelope size={20} />
               </a>
@@ -95,19 +94,19 @@ function Home() {
           </div>
         </div>
 
-        {/* بخش تصویر پروفایل */}
-        <div className="flex-1 flex justify-center items-center">
+        {/* تصویر پروفایل */}
+        <div className="flex flex-1 items-center justify-center">
           <div className="relative">
-            {/* افکت نئونی */}
-            <div className="absolute -inset-1 rounded-full bg-linear-to-r from-primary to-purple-600 opacity-60 blur-2xl animate-pulse"></div>
+            {/* افکت نئونی دور عکس */}
+            <div className="absolute -inset-1 animate-pulse rounded-full bg-linear-to-r from-primary to-purple-600 opacity-60 blur-2xl" />
 
             {/* کادر تصویر */}
-            <div className="relative w-64 h-64 md:w-80 md:h-80 rounded-full p-2 bg-linear-to-b from-primary/50 to-slate-800">
-              <div className="w-full h-full rounded-full overflow-hidden bg-slate-900 border-2 border-primary/40 flex items-center justify-center">
+            <div className="relative h-64 w-64 rounded-full bg-gradient-to-br from-violet-400 via-purple-600 to-indigo-900 p-[3px] shadow-[0_0_25px_rgba(139,92,246,0.5),0_0_60px_rgba(124,58,237,0.3)] md:h-80 md:w-80">
+              <div className="relative flex h-full w-full items-center justify-center overflow-hidden rounded-full border-2 border-violet-400/50 bg-gradient-to-br from-violet-600 to-indigo-900">
                 <img
-                  src={profileImg}
+                  src="/profile/profile.png"
                   alt="یاسمن عابدی"
-                  className="w-full h-full object-cover"
+                  className="h-full w-full object-contain"
                 />
               </div>
             </div>

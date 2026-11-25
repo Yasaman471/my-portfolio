@@ -19,7 +19,7 @@ function Header() {
           href="#home"
           className="text-2xl font-bold text-primary transition-colors hover:text-white"
         >
-          یاسمن عابدی زمیدانی
+          یاسمن عابدی
         </a>
 
         {/* دکمه منوی موبایل */}
