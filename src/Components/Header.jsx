@@ -14,14 +14,7 @@ function Header() {
 
   return (
     <header className="relative z-50 mx-auto w-full max-w-7xl">
-      <div className="flex items-center justify-between px-7 py-4 md:px-10">
-        <a
-          href="#home"
-          className="text-2xl font-bold text-primary transition-colors hover:text-white"
-        >
-          یاسمن عابدی
-        </a>
-
+      <div className="flex flex-row-reverse items-center justify-between px-7 py-4 md:px-10">
         {/* دکمه منوی موبایل */}
         <button
           type="button"
@@ -32,6 +25,13 @@ function Header() {
         >
           {open ? <HiXMark size={28} /> : <HiBars3 size={28} />}
         </button>
+
+        <a
+          href="#home"
+          className="text-2xl font-bold text-primary transition-colors hover:text-white"
+        >
+          یاسمن عابدی
+        </a>
 
         {/* ناوبری اصلی */}
         <nav aria-label="ناوبری اصلی">
