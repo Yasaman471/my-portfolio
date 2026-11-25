@@ -14,7 +14,7 @@ function Projects() {
       description:
         "پلتفرم سفارش و تحویل غذا با منوی دسته‌بندی‌شده، نمایش اطلاعات رستوران‌ها و رابط کاربری جذاب و ریسپانسیو.",
       image: "/projects/foodly.png",
-      tags: ["React", "Tailwind CSS", "JavaScript"],
+      tags: ["React", "JavaScript"],
     },
     {
       id: 3,
@@ -30,7 +30,7 @@ function Projects() {
       description:
         "پلتفرم تخصصی بررسی، فیلتر و مقایسه آنلاین خودروها با پیاده‌سازی رندرینگ بهینه و معماری تایپ‌سیف.",
       image: "/projects/car-store.png",
-      tags: ["Next.js", "TypeScript", "Tailwind CSS"],
+      tags: ["Next.js", "TypeScript"],
     },
   ];
 
