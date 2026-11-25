@@ -1,11 +1,11 @@
-import { FaGithub, FaLinkedin, FaEnvelope, FaTelegram } from "react-icons/fa";
 import { Link } from "react-scroll";
+import SocialLinks from "./module/SocialLink";
 
 function Home() {
   return (
     <section
       id="home"
-      className="relative isolate min-h-[calc(100vh-80px)] overflow-hidden bg-[#29275f] flex items-center justify-center py-12 px-7 md:px-10"
+      className="relative isolate min-h-[calc(100vh-80px)] overflow-hidden bg-section flex items-center justify-center py-12 px-7 md:px-10"
     >
       {/* نورهای ملایم پس‌زمینه */}
       <div className="pointer-events-none absolute -top-40 right-1/4 z-0 h-96 w-96 rounded-full bg-violet-500/40 blur-3xl" />
@@ -52,45 +52,7 @@ function Home() {
               مشاهده رزومه
             </a>
 
-            <div className="flex items-center gap-3">
-              <a
-                href="https://github.com/Yasaman471"
-                target="_blank"
-                rel="noreferrer"
-                aria-label="GitHub"
-                className="rounded-xl bg-slate-800/80 p-3 text-slate-300 transition-all duration-300 hover:bg-slate-800 hover:text-primary"
-              >
-                <FaGithub size={20} />
-              </a>
-
-              <a
-                href="https://linkedin.com/in/yasaman-abedi"
-                target="_blank"
-                rel="noreferrer"
-                aria-label="LinkedIn"
-                className="rounded-xl bg-slate-800/80 p-3 text-slate-300 transition-all duration-300 hover:bg-slate-800 hover:text-primary"
-              >
-                <FaLinkedin size={20} />
-              </a>
-
-              <a
-                href="https://t.me/Yasaman471"
-                target="_blank"
-                rel="noreferrer"
-                aria-label="Telegram"
-                className="rounded-xl bg-slate-800/80 p-3 text-slate-300 transition-all duration-300 hover:bg-slate-800 hover:text-primary"
-              >
-                <FaTelegram size={20} />
-              </a>
-
-              <a
-                href="mailto:yasaman471@gmail.com"
-                aria-label="Email"
-                className="rounded-xl bg-slate-800/80 p-3 text-slate-300 transition-all duration-300 hover:bg-slate-800 hover:text-primary"
-              >
-                <FaEnvelope size={20} />
-              </a>
-            </div>
+            <SocialLinks className="flex h-11 w-11 items-center justify-center rounded-xl border border-white/10 bg-white/5 text-lg text-slate-300 transition duration-300 hover:-translate-y-1 hover:border-primary/40 hover:bg-primary/10 hover:text-primary" />
           </div>
         </div>
 

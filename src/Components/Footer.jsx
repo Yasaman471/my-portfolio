@@ -1,36 +1,13 @@
-import { FaGithub, FaLinkedinIn, FaTelegramPlane } from "react-icons/fa";
-import { HiOutlineMail, HiOutlineArrowUp } from "react-icons/hi";
+import { HiOutlineArrowUp } from "react-icons/hi";
+import SocialLinks from "./module/SocialLink";
 
 function Footer() {
-  const socialLinks = [
-    {
-      name: "GitHub",
-      href: "https://github.com/Yasaman471",
-      icon: <FaGithub />,
-    },
-    {
-      name: "LinkedIn",
-      href: "https://linkedin.com/in/yasaman-abedi",
-      icon: <FaLinkedinIn />,
-    },
-    {
-      name: "Telegram",
-      href: "https://t.me/Yasaman471",
-      icon: <FaTelegramPlane />,
-    },
-    {
-      name: "Email",
-      href: "mailto:yasaman471@gmail.com",
-      icon: <HiOutlineMail />,
-    },
-  ];
-
   const currentYear = new Date().getFullYear();
 
   return (
     <footer
       dir="rtl"
-      className="relative mt-24 overflow-hidden border-t border-white/10 bg-slate-950/80"
+      className="relative mt-24 overflow-hidden border-t border-white/10 bg-section"
     >
       {/* نور پس‌زمینه */}
       <div
@@ -57,26 +34,14 @@ function Footer() {
             aria-label="شبکه‌های اجتماعی"
             className="flex items-center gap-3"
           >
-            {socialLinks.map((item) => (
-              <a
-                key={item.name}
-                href={item.href}
-                aria-label={item.name}
-                title={item.name}
-                target={item.name === "Email" ? undefined : "_blank"}
-                rel={item.name === "Email" ? undefined : "noreferrer"}
-                className="flex h-11 w-11 items-center justify-center rounded-xl border border-white/10 bg-white/5 text-lg text-slate-300 transition duration-300 hover:-translate-y-1 hover:border-primary/40 hover:bg-primary/10 hover:text-primary"
-              >
-                {item.icon}
-              </a>
-            ))}
+            <SocialLinks className="flex h-11 w-11 items-center justify-center rounded-xl border border-white/10 bg-white/5 text-lg text-slate-300 transition duration-300 hover:-translate-y-1 hover:border-primary/40 hover:bg-primary/10 hover:text-primary" />
           </nav>
         </div>
 
         <div className="mt-8 flex flex-col items-center justify-between gap-4 border-t border-white/10 pt-5 text-center text-xs text-slate-500 sm:flex-row">
           <p>
             © {currentYear} یاسمن عابدی — ساخته‌شده با{" "}
-            <span className="text-primary">♥</span> و React
+            <span className="text-red-500">♥</span> و React
           </p>
 
           <a

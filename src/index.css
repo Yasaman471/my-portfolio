@@ -1,30 +1,41 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap");
 @import "tailwindcss";
 
-
 @theme {
     --color-primary: #7562e0;
+    --color-bg-base: #0b0714;
+    --color-bg-surface: rgba(255, 255, 255, 0.05);
+    --color-accent: #a855f7;
+    --color-section: #0b0714;
+    --color-card: #171126;
+}
+
+
+html {
+    scroll-behavior: smooth;
 }
 
 body {
+    margin: 0;
     font-family: "Poppins", sans-serif;
-    background: #1a1a29;
+    background-color: var(--color-bg-base);
+    color: white;
 }
 
 .btn1 {
-    background: #7562e0;
+    background-color: var(--color-primary);
     border-radius: 8px;
     padding: 10px 30px;
     color: white;
 }
 
 .btn1:hover {
-    background: white;
-    color: #7562e0;
+    background-color: white;
+    color: var(--color-primary);
 }
 
 .outline {
-    outline-color: #7562e0;
+    outline-color: var(--color-primary);
 }
 
 .outline:hover {
@@ -32,34 +43,26 @@ body {
 }
 
 .skills:first-child {
-    background: #7562e0;
+    background-color: var(--color-primary);
 }
 
 .skills:first-child:hover {
-    background: #bdbdbd;
+    background-color: #bdbdbd;
 }
 
 .service-card {
     width: auto;
     height: 338px;
-    background: transparent;
-    border: 3px solid #7562e0;
-    filter: drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.2));
+    background-color: transparent;
+    border: 3px solid var(--color-primary);
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
     border-radius: 16px;
 }
 
 .service-card:nth-child(even) {
-    border: 3px solid white;
+    border-color: white;
 }
 
 .service-card:hover {
     border-color: deepskyblue;
-}
-
-html {
-    scroll-behavior: smooth;
-}
-
-body {
-    background: #2a2a62;
 }
