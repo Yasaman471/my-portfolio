@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Link } from "react-scroll";
 import { HiBars3, HiXMark } from "react-icons/hi2";
 
@@ -11,6 +11,15 @@ const NAV_LINKS = [
 
 function Header() {
   const [open, setOpen] = useState(false);
+
+  useEffect(() => {
+    if (!open || window.innerWidth >= 768) return;
+
+    const closeMenu = () => setOpen(false);
+
+    window.addEventListener("scroll", closeMenu, { passive: true });
+    return () => window.removeEventListener("scroll", closeMenu);
+  }, [open]);
 
   return (
     <header className="relative z-50 mx-auto w-full max-w-7xl">
