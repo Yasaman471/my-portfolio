@@ -31,6 +31,30 @@ const projectList = [
     image: "/projects/car-store.png",
     tags: ["Next.js", "TypeScript"],
   },
+  {
+    id: 5,
+    title: "سامانه رزرو سفر",
+    description:
+      "رابط کاربری رزرو سفر با امکان انتخاب مبدأ و مقصد، تاریخ حرکت، تعداد مسافران و کلاس سفر، همراه با نمایش و حذف رزروها.",
+    image: "/projects/booking.png",
+    tags: ["React", "JavaScript"],
+  },
+  {
+    id: 6,
+    title: "فروشگاه آنلاین BotoShop",
+    description:
+      "فروشگاه اینترنتی با نمایش محصولات، جست‌وجو، دسته‌بندی و افزودن محصولات به سبد خرید.",
+    image: "/projects/shop-project.png",
+    tags: ["React", "JavaScript"],
+  },
+  {
+    id: 7,
+    title: "داشبورد رمزارزها",
+    description:
+      "داشبورد نمایش اطلاعات رمزارزها شامل قیمت، درصد تغییرات، ارزش بازار و صفحه‌بندی داده‌ها.",
+    image: "/projects/crypto.png",
+    tags: ["React", "JavaScript"],
+  },
 ];
 
 export { projectList };
